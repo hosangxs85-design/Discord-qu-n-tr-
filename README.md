@@ -114,7 +114,7 @@ pnpm build
 ```
 
 Trên Android xem `TERMUX-ANDROID.md` (điện thoại không đảm bảo chạy 24/7). Xem `DEPLOYMENT-NOTES.md` nếu triển khai trên máy chủ Linux. GitHub Actions chỉ kiểm thử/build, không giữ bot online.
-Để chạy bot bằng Docker Compose trên Oracle Cloud Always Free, xem [`docs/ORACLE-ALWAYS-FREE.md`](docs/ORACLE-ALWAYS-FREE.md). Gói miễn phí có thể bị thu hồi nếu VM bị xem là idle và không cung cấp bảo đảm uptime.
+Để triển khai bot lên Render Background Worker, xem [`docs/RENDER.md`](docs/RENDER.md). Phương án này dùng gói trả phí và disk bền vững; không có lựa chọn free Render phù hợp để giữ bot Gateway online cùng SQLite.
 
 ## Nguồn yêu cầu
 

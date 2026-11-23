@@ -1,0 +1,27 @@
+services:
+  - type: worker
+    name: discord-community-suite
+    runtime: docker
+    plan: 0.5c-512mb
+    region: singapore
+    branch: main
+    autoDeploy: checksPass
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    numInstances: 1
+    preDeployCommand: node dist/deploy-commands.js
+    disk:
+      name: discord-community-suite-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DISCORD_CLIENT_ID
+        sync: false
+      - key: DISCORD_TEST_GUILD_ID
+        sync: false
+      - key: DATABASE_PATH
+        value: /data/bot.sqlite
+      - key: LOG_LEVEL
+        value: info

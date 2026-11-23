@@ -6,7 +6,7 @@
 - Persistent storage cho SQLite (`DATABASE_PATH`, mặc định `./data/bot.sqlite`). Không đặt production database trên filesystem tạm thời.
 - Kết nối mạng ra Discord Gateway/API và Open-Meteo nếu cần thời tiết.
 - Bot cần chạy liên tục để nhận sự kiện và gửi nhắc đúng giờ. Android/Termux là phương án thử nghiệm, không bảo đảm uptime.
-- Triển khai Docker Compose trên Oracle Cloud Always Free được hướng dẫn tại [`docs/ORACLE-ALWAYS-FREE.md`](docs/ORACLE-ALWAYS-FREE.md). Oracle có thể thu hồi VM Always Free bị đánh giá idle; gói miễn phí không bảo đảm uptime hoặc SLA.
+- Triển khai Render Background Worker bằng Docker và persistent disk được hướng dẫn tại [`docs/RENDER.md`](docs/RENDER.md). Gói worker Starter và disk là tài nguyên trả phí.
 
 ## Cài và chạy trên Linux/VM
 
