@@ -1,0 +1,5 @@
+Bot Discord đa năng — Bộ đặc tả dự án
+Phiên bản tài liệu: 1.0
+Ngôn ngữ: Tiếng Việt
+Ngày tạo: 2026-11-23
+Trạng thái: Đặc tả ban đầu; chưa phải mã nguồn triển khai.

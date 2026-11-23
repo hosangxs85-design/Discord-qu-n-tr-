@@ -1,0 +1,31 @@
+services:
+  bot:
+    build:
+      context: .
+      target: runtime
+    restart: unless-stopped
+    init: true
+    env_file:
+      - .env
+    environment:
+      DATABASE_PATH: /data/bot.sqlite
+    volumes:
+      - bot-data:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  commands:
+    build:
+      context: .
+      target: build
+    profiles:
+      - tools
+    env_file:
+      - .env
+    command: ["pnpm", "deploy:commands"]
+    restart: "no"
+
+volumes:
+  bot-data:
