@@ -6,6 +6,7 @@ import { registerVerification } from './events/verification.js';
 import { registerCommunityFeatures } from './events/communityFeatures.js';
 import { registerCommunityTools } from './events/communityTools.js';
 import { registerVoiceRooms } from './events/voiceRooms.js';
+import './health-server.js';
 import { log } from './logger.js';
 
 const client = new Client({
