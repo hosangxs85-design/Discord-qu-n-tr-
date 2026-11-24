@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: discord-quan-gia-free
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    autoDeployTrigger: checksPass
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    numInstances: 1
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DISCORD_CLIENT_ID
+        value: "1574581219906293780"
+      - key: DISCORD_TEST_GUILD_ID
+        sync: false
+      - key: DATABASE_PATH
+        value: /tmp/bot.sqlite
+      - key: REGISTER_COMMANDS_ON_START
+        value: "true"
+      - key: LOG_LEVEL
+        value: info
