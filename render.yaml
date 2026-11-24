@@ -5,7 +5,7 @@ services:
     plan: 0.5c-512mb
     region: singapore
     branch: main
-    autoDeploy: checksPass
+    autoDeployTrigger: checksPass
     dockerfilePath: ./Dockerfile
     dockerContext: .
     numInstances: 1
